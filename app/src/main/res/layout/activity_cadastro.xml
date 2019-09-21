@@ -6,5 +6,129 @@
     android:layout_height="match_parent"
     tools:context=".view.SplashActivity">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/user"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilayout_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:nextFocusDown="@id/tilayout_idade"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:hint="Nome: " />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilayout_idade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop ="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilayout_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:nextFocusDown="@id/tilayout_peso"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="3"
+            android:lines="1"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:hint="Idade" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilayout_peso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop ="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilayout_idade">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:nextFocusDown="@id/tilayout_altura"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:inputType="numberDecimal"
+            android:hint="Peso" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilayout_altura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop ="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilayout_peso">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:nextFocusDown="@id/tilayout_idade"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType = "numberDecimal"
+            android:lines="1"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:hint="Altura: " />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="32dp"
+        android:text="COMEÇAR"
+        android:background="@color/blue_light"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilayout_altura" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
