@@ -31,18 +31,16 @@ public class SplashActivity extends AppCompatActivity {
                 jump();
             }
         });
-
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 jump();
             }
-        },3000);
+        },5000);
     }
 
     private void jump(){
         timer.cancel();
         startActivity(new Intent(SplashActivity.this, CadastroActivity.class));
-        finish();
     }
 }

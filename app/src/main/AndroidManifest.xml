@@ -12,9 +12,9 @@
 
         <activity android:name=".view.ResultadoActivity" />
         <activity android:name=".view.InformacoesActivity" />
-        <activity android:name=".view.SplashActivity" />
+        <activity android:name=".view.CadastroActivity" />
 
-        <activity android:name=".view.CadastroActivity">
+        <activity android:name=".view.SplashActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
